@@ -53,6 +53,9 @@ roslaunch astar_differential astar.launch x_pos:=0.0 y_pos:=0.0
  (Here x and y are in gazebo coordinate frame) I.e. if start coordinates  in generated map is at (955, 505) , we spawn the robot at x_pos:= 4.0 and y_pos:=0.0
  This will start the gazebo simulation with the turtlebot in it as well as the node.
 
+![Turtlebot in RRL](Images/turteblot.gif)
+
+
 ## Recording bag files
 To enable recording of all topics, you can use the argument `record:=true`(By default it is set as false).
 ```
