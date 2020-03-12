@@ -13,6 +13,31 @@ A non-holonomic robot is the one that cant move in y-direction independently. We
 ## Non Holomic constraints
 ![Non holonomic constraints](Images/non_holonomic_constraints.png)
 
+# License
+```
+MIT License
+
+Copyright (c) 2020 ADITYA VAISHAMPAYAN
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
 ## Dependencies
 The following dependencies are required to run this package:
 
@@ -36,11 +61,11 @@ This will install the turtlebot packages.
 To build this package follow the steps below:
 ```
 source /opt/ros/kinetic/setup.bash
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/src
 git clone --recursive https://github.com/adityavaishampayan/ENPM_661_proj3.git
-
+cd ~/src/astar_differential/script
 chmod +x final_submit.py
+
+cd ~/src/astar_differential/
 catkin_make
 source devel/setup.bash
 ```
@@ -67,14 +92,14 @@ You can also specify the time for which you want to record the bag file using:
 roslaunch astar_differential astar.launch x_pos:=0.0 y_pos:=0.0
  record:=true record_time:=30
 ```
-This will record the bag file for 30s and save it in the results subdirectory.
+This will record the bag file for 30s and save it in the result subdirectory.
 
 To examine the recorded bag file, use:
 ```
-rosbag info results/turtlebot_walker.bag
+rosbag info result/turtlebot_walker.bag
 ```
 ## Playing the bag file
-To inspect the recorded bag file, go to the results subdirectory and enter:
+To inspect the recorded bag file, go to the result subdirectory and enter:
 ```
 rosbag info turtlebot_walker.bag
 ```
